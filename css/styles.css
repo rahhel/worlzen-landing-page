@@ -1,0 +1,193 @@
+
+*{
+  box-sizing: border-box; }
+
+
+html, body{
+  margin:0;
+  padding:0;
+  font-family: "Helvetica";}
+
+.wrapper{
+  width: 1140px;
+  max-width:90%;
+  margin:0 auto;
+
+}
+
+  .banner{
+   background: #30313d url(../images/bg-pattern.svg);
+   background-repeat: repeat; }
+    .banner h1{
+      color: #ffffff;
+      text-transform: uppercase;
+      padding: 2em 0;
+      margin: 0;
+      font-size: 4em;
+      line-height: 0.5;
+
+    }
+
+    .nav{
+      background: #3a3b49;
+    }
+    .nav a, .nav label{
+      text-transform: none;
+      font-size: 1.5em;
+      text-decoration: none;
+      font-weight:700;
+      color: #ffffff;
+      margin-right: 2em;
+}
+.nav a:hover,.nav label:hover{
+  color: #4ad7b1;
+}
+.nav label:hover{
+  color:#ffffff;
+
+}
+
+    .nav label{
+      margin-right:0;
+      border-right: 1px solid #4ad7b1;
+      padding-right: 2em;
+
+    }
+    .nav input[type="search"]{
+      background: transparent;
+      outline:none;
+      border: none;
+      color:#ffffff;
+      font-style: italic;
+      font-size: 1.25em;
+      font-weight: 400;
+      padding: 2em 1em;
+
+    }
+
+    .meetups{
+      list-style: none;
+      padding:0;
+      margin:0;
+
+    }
+    .meetups li{
+      width:25%;
+      float:left;
+      display:inline block;
+      position: relative;
+      overflow:hidden;
+      transition: transform 0.4s, opacity 01.s 0.3s;
+
+    }
+
+    .meetups li img{
+      width:100%;
+      max-width 100%;
+    }
+
+    .meetups .info{
+      background: rgba(74, 215 , 177, 0.85);
+      padding: 2.5em 10%;
+      height:100%;
+      width:100%;
+      position:absolute;
+      top:auto;
+      bottom:0;
+      opacity: 0;
+      transform: translateY(100%);
+      transition: transform 0.4s, opacity 0.1s 0.3s;
+
+
+
+
+    }
+
+  .meetups .info h2{
+    font-size: 1.5em;
+    line-height: 1;
+    margin: 0 0 1em 0;
+    color:#ffffff;
+    margin-bottom: 2em;
+  }
+
+.meetups .info .button{
+
+  border: 4px solid #ffffff;
+  padding: 1em 4.5em;
+  border-radius: 0.5em;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size:0.9em;
+  font-weight:700;
+  transition: all 0.4s ease-in-out;
+
+}
+
+.resources .info .button:hover{
+  border: 2px solid #30313d;
+  color:#30313d;
+}
+
+.meetups .info .price{
+  display: inline;
+  font-weight: 700;
+  color: #30313d;
+  padding-left: 1.5em;
+  color:#fff;
+
+}
+.meetups li:hover img{
+  transform: scale(1.5);
+  transition: transform 0.4s, opacity 0.1s 0.3s;
+
+}
+.meetups li:hover .info{
+  opacity: 1;
+  transform: translateY(0px);
+  transition: transform 0.4s, opacity 0.1s;
+
+}
+
+
+@media only screen and (max-width: 1250px)
+{
+      .meetups li{
+        width :33.333%;}
+
+    }
+
+    @media only screen and (max-width: 900px){
+      .meetups li{
+        width :50%;}
+        .banner h1{
+          line-height: 3.5;
+          padding: 0.5em 0;
+          font-size:3.5em;
+        }
+        .nav a, .nav label{
+          font-size: 1.1em;
+          margin-right: 1em;
+
+        }
+        .nav input[type="search"]{
+          padding:1.5em;
+          font-size: 1.1em;
+
+        }
+
+
+    }
+    @media only screen and (max-width: 600px){
+      .meetups li{
+        width :100%;}
+        .banner h1{
+          font-size: 2.5em;
+
+        }
+      .nav a{
+        display: none;
+      }
+
+    }
